@@ -46,7 +46,6 @@ img {
   max-width: 1158px;
   margin: 0 auto;
   padding: 0 15px;
-  /* outline: 1px solid green; */
 }
 .logo {
   font-family: var(--secondary-font);
@@ -170,6 +169,7 @@ header {
 .address-link:focus {
   color: var(--link-hover-color);
 }
+/* =========== /HEADER =========== */
 /* ============ HERO ============ */
 .hero {
   text-align: center;
@@ -196,7 +196,7 @@ header {
 }
 .hero-btn {
   color: #ffffff;
-  background: #4d5ae5;
+  background-color: #4d5ae5;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   padding: 16px 32px;
@@ -208,6 +208,7 @@ header {
   background-color: var(--link-hover-color);
   cursor: pointer;
 }
+/* ============ /HERO ============ */
 /* ========= ADVANTAGES ============= */
 .advantages {
   padding: 120px 0;
@@ -235,7 +236,8 @@ header {
 .advantages-text {
   color: var(--main-text-color);
 }
-/* ========== DOING ============= */
+/* =========== /ADVANTAGES ============== */
+/* ============== DOING ================== */
 .doing {
   padding-bottom: 120px;
 }
@@ -251,7 +253,8 @@ header {
 .doing-item {
   width: calc((100% - gap * 2) / 3);
 }
-/* ============ TEAM =========== */
+/* ============== /DOING ================== */
+/* ================= TEAM ================= */
 .team {
   background: #f4f4fd;
   padding: 120px 0;
@@ -310,7 +313,8 @@ header {
 .team-social-icon {
   fill: #f4f4fd;
 }
-/* ========= COSTUMERS ======== */
+/* =============== /TEAM ================ */
+/* ============== COSTUMERS =============== */
 .costumes {
   padding-top: 130px;
   padding-bottom: 120px;
@@ -345,9 +349,8 @@ header {
 .costumers-icon {
   fill: currentColor;
 }
-
-/* ===== Portfolio: FILTER and PROJECTS ===== */
-
+/* ============== /COSTUMERS =============== */
+/* ====== Portfolio: FILTER and PROJECTS ====== */
 .filter {
   padding-top: 96px;
   padding-bottom: 120px;
@@ -439,8 +442,8 @@ header {
 .projects-link:focus .overlay {
   transform: translate(0, 0);
 }
-
-/* ======== FOOTER ========*/
+/* ====== /Portfolio: FILTER and PROJECTS ====== */
+/* =============== FOOTER ==============*/
 .footer {
   background-color: var(--background-color);
   padding: 100px 0;
@@ -496,7 +499,13 @@ header {
 .footer-social-icon {
   fill: #f4f4fd;
 }
-/*======= MODAL WINDOW ========*/
+.footer-form-text {
+  font-weight: 500;
+  color: #ffffff;
+  margin-bottom: 16px;
+}
+/* =============== /FOOTER ==============*/
+/*============= MODAL WINDOW =============*/
 .backdrop {
   position: fixed;
   z-index: 100;
@@ -556,7 +565,8 @@ header {
   text-align: center;
   margin: 72px 0 16px;
 }
-/*============= MODAL FORM ================*/
+/*============= /MODAL WINDOW =============*/
+/*=============== MODAL FORM ================*/
 .modal-form {
   display: flex;
   flex-direction: column;
@@ -618,6 +628,15 @@ header {
   outline: none;
   border-color: #4d5ae5;
 }
+.modal-form-check-desc {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: #757575;
+}
 .modal-form-check-desc::before {
   content: '';
   display: block;
@@ -626,7 +645,38 @@ header {
   border: 1.25px solid #2e2f42;
   border-radius: 2px;
   cursor: pointer;
+  margin-right: 8px;
 }
 .modal-form-check:checked + .modal-form-check-desc::before {
   background-color: #404bbf;
+  background-image: url(../images/form-check-mark.svg);
+  fill: #f4f4fd;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
 }
+.modal-form-check:focus + .modal-form-check-desc::before {
+  outline: 1.25px solid #404bbf;
+  border-radius: 2px;
+}
+.modal-form-submit {
+  min-width: 169px;
+  align-self: center;
+  padding: 16px 32px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.15;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+  background-color: #4d5ae5;
+  border: none;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  transition: background-color var(--transition-dur-and-func);
+}
+.modal-form-submit:hover,
+.modal-form-submit:focus {
+  background-color: var(--link-hover-color);
+  cursor: pointer;
+}
+/*=============== /MODAL FORM ================*/
